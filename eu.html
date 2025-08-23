@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Mim - Kaká</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 20px;
+      text-shadow: 0 0 20px #00f0ff, 0 0 40px #00f0ff;
+      animation: glow 3s infinite alternate;
+    }
+ button {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 12px 35px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(45deg, #3d98ff, #6464ff);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 0 15px rgba(100, 100, 255, 0.6), 0 0 30px rgba(61, 152, 255, 0.4);
+  animation: glow 3s infinite alternate;
+  transition: all 0.4s ease;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(100, 100, 255, 0.4), 0 0 20px rgba(61, 152, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(100, 100, 255, 0.8), 0 0 50px rgba(61, 152, 255, 0.6);
+  }
+}
+
+button:hover {
+  transform: scale(1.1) rotate(1deg);
+  background: linear-gradient(45deg, #6464ff, #3d98ff);
+  box-shadow: 0 0 25px rgba(61, 152, 255, 0.8), 0 0 60px rgba(100, 100, 255, 0.7);
+  text-shadow: 0 0 10px #fff;
+}
+
+    @keyframes glow {
+      0% { text-shadow: 0 0 10px #00f0ff; }
+      100% { text-shadow: 0 0 30px #00f0ff, 0 0 60px #00f0ff; }
+    }
+
+    .sobre-container {
+      max-width: 800px;
+      width: 90%;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      text-align: center;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* FOTO COM BORDA NEON */
+    .foto-perfil {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      margin: 20px auto;
+      display: block;
+      position: relative;
+      overflow: hidden;
+      border: 5px solid transparent;
+      background: linear-gradient(45deg, #00f0ff, #007bff, #00f0ff);
+      background-size: 400% 400%;
+      animation: bordaAnimada 6s infinite linear;
+    }
+
+    @keyframes bordaAnimada {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .foto-perfil img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #24243e;
+    }
+
+    .sobre-container p {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      color: #ddd;
+      margin-bottom: 15px;
+    }
+
+    .sobre-container strong {
+      color: #00f0ff;
+      font-weight: bold;
+    }
+
+    /* Botão estiloso */
+    .btn-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 30px;
+      font-size: 1.2rem;
+      color: #fff;
+      background: linear-gradient(90deg, #00f0ff, #007bff);
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+      transition: all 0.3s ease;
+    }
+
+    .btn-link:hover {
+      background: linear-gradient(90deg, #007bff, #00f0ff);
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(0, 255, 255, 1);
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .sobre-container p {
+        font-size: 1rem;
+      }
+      .btn-link {
+        font-size: 1rem;
+        padding: 10px 25px;
+      }
+      .foto-perfil {
+        width: 140px;
+        height: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+   <button onclick="location.href='index.html'">Voltar</button> 
+  <h1>Sobre Mim</h1>
+
+  <div class="sobre-container">
+    <!-- Foto com efeito neon -->
+    <div class="foto-perfil">
+      <img src="WIN_20241230_13_45_11_Pro.jpg" alt="Minha Foto">
+    </div>
+
+    <p>Oi! Eu sou <strong>Kaká</strong>, um estudante apaixonado por tecnologia e programação. 🚀</p>
+    <p>Aos 12 anos já mergulho no mundo do <strong>HTML, CSS, JavaScript e Backend</strong>, criando sites e experimentando ideias novas.</p>
+    <p>Gosto de desafios, de aprender coisas novas e de transformar linhas de código em algo incrível para todo mundo ver.</p>
+    <p>Meu objetivo? Me tornar um desenvolvedor top e construir projetos que façam a diferença no mundo digital. 💻</p>
+
+    <a href="https://br.linkedin.com/in/carlos-alberto-lacerda-dias-0170b3335" class="btn-link" target="_blank">Meu LinkedIn</a>
+  </div>
+</body>
+</html>
